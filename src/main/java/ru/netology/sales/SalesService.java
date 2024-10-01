@@ -38,9 +38,10 @@ public class SalesService {
     }
 
     public int countMonthSalesLowerAver(long[] sales) {
+        long avr = averageSumSales(sales);
         int countMonth = 0;
         for (long i : sales) {
-            if (i < averageSumSales(sales)) {
+            if (i < avr) {
                 countMonth++;
             }
         }
@@ -48,9 +49,10 @@ public class SalesService {
     }
 
     public int countMonthSalesUpAver(long[] sales) {
+        long avr = averageSumSales(sales);
         int countMonth = 0;
         for (long i : sales) {
-            if (i > averageSumSales(sales)) {
+            if (i > avr) {
                 countMonth++;
             }
         }
