@@ -4,17 +4,13 @@ public class SalesService {
     public long sumSales(long[] sales) {
         long sum = 0;
         for (long i : sales) {
-            sum = sum + i;
+            sum += i;
         }
         return sum;
     }
 
     public long averageSumSales(long[] sales) {
-        long sum = 0l;
-        for (long i : sales) {
-            sum = sum + i;
-        }
-        return sum / sales.length;
+        return sumSales(sales) / sales.length;
     }
 
     public int monthOfMaxSales(long[] sales) {
